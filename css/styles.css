@@ -1,0 +1,59 @@
+:root{
+--main-background-color:#FFFFFF;
+--footer-header-main-background-color:#2F303A;
+--main-text-color:#212121;
+--second-text-color:#757575;
+--navigation-color:#2196F3;
+--white-color:#FFFFFF;
+--footer-text-color:rgba(255, 255, 255, 0.6);
+}
+/*Значение для всего макета*/
+.page{
+    background-color:var(--main-background-color);
+    color: var(--second-text-color);
+}
+
+/*Значение для header (логотип( в футере тоже),активные ссылки и контакты)*/
+.logo{
+    color:var(--main-text-color);
+}
+.letter{
+    color:var(--navigation-color);
+}
+.site-nav .link{
+    color:var(--main-text-color)
+}
+.site-nav .link:hover,
+.site-nav .link:focus{
+    color:var(--navigation-color)
+}
+.contact-nav .link{
+    color: var(--second-text-color);
+}
+.contact-nav .link:hover,
+.contact-nav .link:focus{
+    color: var(--navigation-color);
+}
+
+/*Cтилизация списков ul*/
+ul{
+    list-style: none;
+}
+/*Стилизация кнопки и подложки*/
+.top-section .titel{
+    color: var(--white-color);
+}
+button{
+    color:var(--white-color);
+    background-color: var(--navigation-color);
+}
+/*Стилизация заголовков h1/h2/h3*/
+.section .titel{
+    color: var(--main-text-color);
+}
+.location .map{
+    color: var(--footer-text-color);
+}
+.location .link{
+    color: var(--footer-text-color);
+}
