@@ -10,29 +10,46 @@
 }
 /*Главная страница + повторяющееся инфа*/
 /*Значение для всего макета*/
-.page{
+body{
     background-color:var(--main-background-color);
     color: var(--second-text-color);
     font-family:Roboto,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+/*Прячем не существующий заголовок*/
+.visually-hidden {
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0;
+padding: 0;
+white-space: nowrap;
+clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
 }
 
-/*Значение для header (логотип),активные ссылки и контакты)*/
-.logo{
+/*Значение для header and footer (логотип),активные ссылки и контакты)*/
+.logo-head,
+.logo-footer{
     color:var(--main-text-color);
-    font-family:Raleway,sans-serif;
+    font-family: Raleway,sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
-    letter-spacing: 0.03em;
     text-decoration: none;
 }
-.firstpart{
+.logo-head .firstpart,
+.logo-footer .firstpart{
     color:var(--navigation-color);
 }
+
 .site-nav .link{
     color:var(--main-text-color);
     font-weight: 500;
-    font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.02em;
     text-decoration: none;
@@ -41,16 +58,19 @@
 .site-nav .link:focus{
     color:var(--navigation-color)
 }
-.contact-nav .link{
+.site-nav .link.current{
+    color: var(--navigation-color)
+}
+
+.contacts-nav .contact{
     color: var(--second-text-color);
     font-weight: 500;
-    font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.02em;
     text-decoration: none;
 }
-.contact-nav .link:hover,
-.contact-nav .link:focus{
+.contacts-nav .contact:hover,
+.contacts-nav .contact:focus{
     color: var(--navigation-color);
 }
 
@@ -59,10 +79,10 @@ ul{
     list-style: none;
 }
 /*Стилизация кнопки и подложки*/
-.top-section{
+.hero{
     background-color: var(--footer-background-color);
 }
-.top-section .titel{
+.hero .hero-title{
     color: var(--white-color);
     font-weight: 900;
     font-size: 44px;
@@ -71,8 +91,9 @@ ul{
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
-button{
-    color:var(--white-color);
+.hero .hero-button{
+    font-family: inherit;
+    color: var(--white-color);
     background-color: var(--navigation-color);
     font-weight: 700;
     font-size: 16px;
@@ -83,31 +104,27 @@ button{
     letter-spacing: 0.06em;
     text-decoration: none;
     cursor: pointer;
+    border: 1px solid #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
 }
 
 /*Стилизация заголовков h1/h2/h3*/
-.section .titel{
+.section .section-title{
     color: var(--main-text-color);
     font-weight: 700;
-    font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
 }
-.section .second-titel,
-.section .third-titel{
+.section .work-title,
+.section .team-title{
     color: var(--main-text-color);
     font-weight: 700;
     font-size: 36px;
     line-height: 1.2;
     text-align: center;
-    letter-spacing: 0.03em;
 }
-.section p{
-    font-weight: 400;
-    font-size: 14px;
+.section .section-description{
     line-height: 1.71;
-    letter-spacing: 0.03em;
 }
 .section .name{
     color: var(--main-text-color);
@@ -115,67 +132,62 @@ button{
     font-size: 16px;
     line-height: 1.2;
     text-align: center;
-    letter-spacing: 0.03em;
 }
-.section p{
-    font-weight: 400;
+.section .position{
     font-size: 16px;
     line-height: 1.2;
     text-align: center;
-    letter-spacing: 0.03em;
 }
+
 .location-nav{
     background-color: var(--footer-background-color);
     text-decoration: none;
 }
-.location .map,
-.location .link{
+.location-list .map,
+.location-list .location-contact{
     color: var(--footer-text-color);
-    font-weight: 400;
-    font-size: 14px;
     line-height: 1.71;
-    letter-spacing: 0.03em;
 }
-
-
+.location-list .map:hover,
+.location-list .map:focus{
+    color: var(--navigation-color);
+}
+.location-list .location-contact:hover,
+.location-list .location-contact:focus{
+    color: var(--navigation-color);
+}
 
 
 /*Портфолио*/
 /*Cтилизация активных кнопок*/
 .button-nav .button{
+    font-family: inherit;
     color: var(--footer-background-color);
     background-color: var(--button-no-active-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
-    letter-spacing: 0.03em;
-}
+   }
 .button-nav .button:hover,
 .button-nav .button:focus{
     color: var(--white-color);
     background-color: var(--navigation-color);
 }
 /*Cтилизация списка проектов*/
-.project-list .titel{
+.project-list .project-title{
     color: var(--main-text-color);
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
 }
-.project-list p{
-    font-weight: 400;
+.project-list .project-type{
     font-size: 16px;
     line-height: 1.88;
-    letter-spacing: 0.03em;
-}
+    }
 /*Стилизация логотипа в Футере*/
-.logo-second{
+.location-nav .logo-footer{
     color:var(--white-color);
-    font-family: Raleway, sans-serif;
     text-decoration: none;
-}
-.logo-second .firstpart{
-    color: var(--navigation-color);
 }
