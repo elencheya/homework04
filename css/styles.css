@@ -14,7 +14,6 @@ body{
     background-color:var(--main-background-color);
     color: var(--second-text-color);
     font-family:Roboto,sans-serif;
-    font-weight: 400;
     font-size: 14px;
     letter-spacing: 0.03em;
 }
@@ -49,6 +48,7 @@ overflow: hidden;
 
 .site-nav .link{
     color:var(--main-text-color);
+    font-style: normal;
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: 0.02em;
@@ -64,6 +64,7 @@ overflow: hidden;
 
 .contacts-nav .contact{
     color: var(--second-text-color);
+    font-style: normal;
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: 0.02em;
@@ -86,7 +87,7 @@ ul{
     color: var(--white-color);
     font-weight: 900;
     font-size: 44px;
-    line-height: 1.4;
+    line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -104,36 +105,34 @@ ul{
     letter-spacing: 0.06em;
     text-decoration: none;
     cursor: pointer;
-    border: 1px solid #000000;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
 }
 
 /*Стилизация заголовков h1/h2/h3*/
-.section .section-title{
+.about .about-title{
     color: var(--main-text-color);
-    font-weight: 700;
+    font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
 }
-.section .work-title,
-.section .team-title{
+.work .work-title,
+.team .team-title{
     color: var(--main-text-color);
-    font-weight: 700;
     font-size: 36px;
     line-height: 1.2;
     text-align: center;
 }
-.section .section-description{
+.about .about-description{
     line-height: 1.71;
 }
-.section .name{
+.team .team-member{
     color: var(--main-text-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.2;
     text-align: center;
 }
-.section .position{
+.team .team-position{
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.2;
     text-align: center;
@@ -143,14 +142,19 @@ ul{
     background-color: var(--footer-background-color);
     text-decoration: none;
 }
-.location-list .map,
+.location-list .map{
+    color: var(--white-color);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.71;
+    text-decoration: none;
+}
 .location-list .location-contact{
     color: var(--footer-text-color);
+    font-style: normal;
+    font-weight: 400;
     line-height: 1.71;
-}
-.location-list .map:hover,
-.location-list .map:focus{
-    color: var(--navigation-color);
+    text-decoration: none;
 }
 .location-list .location-contact:hover,
 .location-list .location-contact:focus{
@@ -160,7 +164,7 @@ ul{
 
 /*Портфолио*/
 /*Cтилизация активных кнопок*/
-.button-nav .button{
+.button{
     font-family: inherit;
     color: var(--footer-background-color);
     background-color: var(--button-no-active-color);
@@ -168,21 +172,26 @@ ul{
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
+    cursor: pointer;
    }
-.button-nav .button:hover,
-.button-nav .button:focus{
+.button:hover,
+.button:focus{
     color: var(--white-color);
     background-color: var(--navigation-color);
 }
-/*Cтилизация списка проектов*/
-.project-list .project-title{
+.button.current{
     color: var(--main-text-color);
-    font-weight: 700;
+    background-color:var(--white-color);
+}
+/*Cтилизация списка проектов*/
+.service-projects .project-title{
+    color: var(--main-text-color);
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
 }
-.project-list .project-type{
+.service-projects .project-kind{
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.88;
     }
