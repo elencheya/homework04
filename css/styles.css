@@ -180,8 +180,8 @@ ul{
     background-color: var(--navigation-color);
 }
 .button.current{
-    color: var(--main-text-color);
-    background-color:var(--white-color);
+    color: var(--white-color);
+    background-color:var(--navigation-color);
 }
 /*Cтилизация списка проектов*/
 .service-projects .project-title{
