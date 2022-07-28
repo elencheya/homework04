@@ -8,6 +8,33 @@
 --footer-text-color:rgba(255, 255, 255, 0.6);
 --button-no-active-color:#F5F4FA;
 }
+
+h1,
+h2,
+h3,
+p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+ul,
+ol{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+
+img{
+    display: block;
+}
+
+.container{
+    width: 1200px;
+    margin-left:auto ;
+    margin-right:auto ;
+    padding-left: 15px ;
+    padding-right: 15px ;
+}
 /*Главная страница + повторяющееся инфа*/
 /*Значение для всего макета*/
 body{
@@ -31,46 +58,17 @@ clip: rect(0 0 0 0);
 overflow: hidden;
 }
 
-html {
-box-sizing: border-box;
-}
-
-/*Сброс стилей по селекторку тега*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-p{
-    margin: 0px;
-    padding: 0px;
-}
-
-/*Хедер*/
 .header-container{
-width: 1200px;
-padding-left: 15px;
-padding-right: 15px;
-margin: auto;
-
-
-
-outline: 2px solid tomato;
+    display:flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
-
-/*Футер*/
-.footer-container{
-width: 1200px;
-padding-left: 15px;
-padding-right: 15px;
-margin: auto;
-    
-outline: 2px solid tomato;
+.header-navigation{
+    display: flex;
+    align-items: center;
 }
-
 
 /*Значение для header and footer (логотип),активные ссылки и контакты)*/
 .logo-head,
@@ -82,16 +80,22 @@ outline: 2px solid tomato;
     line-height: 1.2;
     text-decoration: none;
 }
+.logo-head{
+    margin-right: 93px;
+}
+
+
 .logo-head .firstpart,
 .logo-footer .firstpart{
     color:var(--navigation-color);
 }
-
+.site-nav{
+    display: flex;
+}
+.site-nav li:not(:last-child){
+    margin-right: 50px;
+}
 .site-nav .link{
-
-
-
-
     color:var(--main-text-color);
     font-style: normal;
     font-weight: 500;
@@ -106,7 +110,13 @@ outline: 2px solid tomato;
 .site-nav .link.current{
     color: var(--navigation-color)
 }
-
+.contacts-nav{
+    display: flex;
+    margin-left: auto;
+}
+.contacts-nav li:not(:last-child){
+    margin-right: 50px;
+}
 .contacts-nav .contact{
     color: var(--second-text-color);
     font-style: normal;
@@ -120,22 +130,25 @@ outline: 2px solid tomato;
     color: var(--navigation-color);
 }
 
+
 /*Убираем точки у всех списков*/
 ul{
     list-style: none;
 }
 /*Стилизация кнопки и подложки*/
+/*HERO*/
 .hero{
     background-color: var(--footer-background-color);
     text-align: center;
+
 }
+
 .hero .hero-title{
-    margin-top: 200px;
-    margin-left: 452px;
-    margin-right: 452px;
-    border: 2px solid tomato;
-
-
+    margin-bottom: 30px;
+    width: 697px;
+    margin-left: auto;
+    margin-right: auto;
+    
     color: var(--white-color);
     font-weight: 900;
     font-size: 44px;
@@ -144,16 +157,11 @@ ul{
     text-transform: uppercase;
 }
 .hero .hero-button{
-    display: inline-block;
-    margin-top: 30px;
-    margin-bottom: 200px;
-    margin-left: 700px;
-    margin-right: 700px;
-    padding: 10px 32px;
-    min-width: 200px;
-    height: 50px;
     border-radius: 4px;
-    border: transparent;
+    border-color: transparent;
+    min-width: 136px;
+    padding: 10px 32px;
+    margin-bottom: 200px;
 
 
     font-family: inherit;
@@ -162,18 +170,23 @@ ul{
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
+    display:inline-block;
     align-items: center;
     letter-spacing: 0.06em;
     text-decoration: none;
     cursor: pointer;
 }
-
-.about-section{
-    margin-top: 94px;
-    margin-bottom: 94px;
-    width: 1170px;
-    border: 2px solid tomato;
+.about-list{
+    display: flex;
+    gap: 30px;
 }
+
+.about-container{
+    margin-top: 94px;
+    padding-bottom: 47px;
+    display: flex;
+}
+
 /*Стилизация заголовков h1/h2/h3*/
 .about .about-title{
     margin-bottom: 10px;
@@ -183,41 +196,34 @@ ul{
     line-height: 1.14;
     text-transform: uppercase;
 }
-
-.work-section{
-    margin-bottom:94px;
-    width: 1170px;
-    border: 2px solid tomato;
+.work-title{
+    padding-top: 47px;
 }
-
 .work .work-title,
 .team .team-title{
-    margin-bottom: 50px;
-    border: 2px solid tomato;
-
-
     color: var(--main-text-color);
     font-size: 36px;
     line-height: 1.2;
-    text-align: center;
+    text-align: center; 
 }
-.team .team-title {
-    margin-top: 94px;
+.work-imeges{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
 }
 .about .about-description{
     line-height: 1.71;
 }
-
-.team-section{
+.team{
     margin-bottom: 94px;
-    border: 2px solid green;
-
+}
+.team-title{
+    margin-top: 94px;
+    margin-bottom: 50px;
 }
 .team .team-member{
-    margin-top: 30px;
     margin-bottom: 10px;
-    border: 2px solid orangered;
-
 
     color: var(--main-text-color);
     font-weight: 500;
@@ -225,16 +231,21 @@ ul{
     line-height: 1.2;
     text-align: center;
 }
+.team-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
 .team .team-position{
-    margin-bottom: 30px;
-
-
     font-weight: 400;
     font-size: 16px;
     line-height: 1.2;
     text-align: center;
 }
-
+.team-description{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 .location-nav{
     background-color: var(--footer-background-color);
     text-decoration: none;
@@ -253,6 +264,7 @@ ul{
     line-height: 1.71;
     text-decoration: none;
 }
+
 .location-list .location-contact:hover,
 .location-list .location-contact:focus{
     color: var(--navigation-color);
@@ -261,17 +273,23 @@ ul{
 
 /*Портфолио*/
 /*Cтилизация активных кнопок*/
-.button{
-    display: inline-block;
+.service-list-container{
     margin-top: 94px;
-    margin-bottom: 50px;
-    padding: 10px 32px;
-    min-width: 73px;
-    height: 38px;
+    margin-bottom: 94px;
+}
+
+.service-list{
+    margin-bottom: 34px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.button{
+    border-color: transparent;
     border-radius: 4px;
-    border: transparent;
-
-
+    min-width: 73px;
+    padding: 6px 22px;
 
     font-family: inherit;
     color: var(--footer-background-color);
@@ -281,25 +299,38 @@ ul{
     line-height: 1.62;
     text-align: center;
     cursor: pointer;
-   }
+}
+
 .button:hover,
 .button:focus{
     color: var(--white-color);
     background-color: var(--navigation-color);
 }
+
+
 .button.current{
     color: var(--white-color);
     background-color:var(--navigation-color);
 }
 
-.servises-container{
-    margin-top: 94px;
+
+.service-projects{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; ;
+}
+
+
+.service-projects-container{
     margin-bottom: 94px;
-    border: 3px solid purple;
+}
+
+.project-title-list{
+    padding: 20px 24px;
 }
 /*Cтилизация списка проектов*/
 .service-projects .project-title{
-    margin-bottom: 4px;
+    margin-top: 20px;
 
 
     color: var(--main-text-color);
@@ -308,8 +339,9 @@ ul{
     letter-spacing: 0.06em;
 }
 .service-projects .project-kind{
-    margin-bottom: 20px;
-    
+    margin-top: 4px;
+
+
     font-weight: 400;
     font-size: 16px;
     line-height: 1.88;
@@ -318,4 +350,16 @@ ul{
 .location-nav .logo-footer{
     color:var(--white-color);
     text-decoration: none;
+}
+
+.location-nav-container{
+    padding-top: 60px;
+    padding-bottom: 60px ;
+    justify-content: flex-start;
+}
+.location-list{
+    margin-top: 20px;
+}
+.location-list li:not(:last-child){
+    margin-bottom: 9px;
 }
