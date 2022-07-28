@@ -327,6 +327,9 @@ ul{
 
 .project-title-list{
     padding: 20px 24px;
+    border-bottom: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
 }
 /*Cтилизация списка проектов*/
 .service-projects .project-title{
