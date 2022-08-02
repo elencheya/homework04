@@ -26,8 +26,20 @@
                 </ul>
             </nav>
             <ul class="contacts-nav">
-                <li><a href="mailto:info@devstudio.com" class="contact">info@devstudio.com</a></li>
-                <li><a href="tel:+380961111111" class="contact">+38 096 111 11 11</a></li>
+                <li class="contacts-nav-list">
+                    <svg class="contacts-nav-icon-first">
+                        <use href="./images/sprite/sprite.svg.svg#icon-envelope">
+                        </use>
+                    </svg>
+                    <a href="mailto:info@devstudio.com" class="contact">info@devstudio.com</a>
+                </li>
+                <li class="contacts-nav-list">
+                    <svg class="contacts-nav-icon-second">
+                        <use href="./images/sprite/sprite.svg.svg#icon-vector3">
+                        </use>
+                    </svg>
+                    <a href="tel:+380961111111" class="contact">+38 096 111 11 11</a>
+                </li>
             </ul>
         </div>
     </header>
@@ -126,24 +138,59 @@
         </section>
     </main>
     <footer class="location-nav">
-        <!--Логотип компании,адресс и контакты-->
-            <div class="container location-nav-container">
-                <a href="./portfolio.html" class="logo-footer"><span class="firstpart">Web</span>Studio</a>
+        <div class="container footer-wrap">
+            <div class="logo-contact-container">
+                <a href="./index.html" class="logo-footer"><span class="firstpart">Web</span>Studio</a>
                 <address>
                     <ul class="location-list">
-                        <li>
-                            <a href="https://goo.gl/maps/piqngm7oDQpEDh6u6" target="_blank" rel="noopener nofollow noreferrer"
-                                class="map">г. Киев, пр-т Леси Украинки, 26</a>
-                        </li>
-                        <li>
-                            <a href="mailto:info@example.com" class="location-contact">info@example.com</a>
-                        </li>
-                        <li>
-                            <a href="tel:+380991111111" class="location-contact">+38 099 111 11 11</a>
-                        </li>
+                        <li><a href="https://goo.gl/maps/piqngm7oDQpEDh6u6" target="_blank"
+                                rel="noopener nofollow noreferrer" class="map">г. Киев, пр-т Леси Украинки, 26</a></li>
+                        <li><a href="mailto:info@example.com" class="location-contact">info@example.com</a></li>
+                        <li><a href="tel:+380991111111" class="location-contact">+38 099 111 11 11</a></li>
                     </ul>
                 </address>
             </div>
+            <div class="action">
+                <div class="action-text-title">
+                    <b class="action-title">присоединяйтесь</b>
+                </div>
+                <div class="action-list">
+                    <ul class="action-social-list">
+                        <li>
+                            <a href="" class="action-social-list-link">
+                                <svg class="action-social-list-icon">
+                                    <use href="./images/sprite/sprite.svg.svg#icon-instagram">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="action-social-list-link">
+                                <svg class="action-social-list-icon">
+                                    <use href="./images/sprite/sprite.svg.svg#icon-twitter2">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="action-social-list-link">
+                                <svg class="action-social-list-icon">
+                                    <use href="./images/sprite/sprite.svg.svg#icon-facebook2">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="action-social-list-link">
+                                <svg class="action-social-list-icon">
+                                    <use href="./images/sprite/sprite.svg.svg#icon-linkedin2">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

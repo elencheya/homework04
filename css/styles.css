@@ -1,5 +1,5 @@
 :root{
---main-background-color:#FFFFFF;
+--main-background-color:#F5F5F5;
 --footer-background-color:#2F303A;
 --main-text-color:#212121;
 --second-text-color:#757575;
@@ -7,6 +7,7 @@
 --white-color:#FFFFFF;
 --footer-text-color:rgba(255, 255, 255, 0.6);
 --button-no-active-color:#F5F4FA;
+--team-background-color:#F5F4FA;
 }
 
 h1,
@@ -91,7 +92,6 @@ overflow: hidden;
     margin-right: 93px;
 }
 
-
 .logo-head .firstpart,
 .logo-footer .firstpart{
     color:var(--navigation-color);
@@ -117,10 +117,29 @@ overflow: hidden;
 .site-nav .link.current{
     color: var(--navigation-color)
 }
+.contacts-nav-list{
+    display: flex;
+}
+
 .contacts-nav{
     display: flex;
     margin-left: auto;
 }
+
+.contacts-nav-icon-first{
+    margin-right: 10px;
+    width: 16px;
+    height: 12px ;
+    fill: var(--second-text-color);
+}
+
+.contacts-nav-icon-second{
+    margin-right: 10px;
+    width: 10px;
+    height: 16px;
+    fill: var(--second-text-color);
+}
+
 .contacts-nav li:not(:last-child){
     margin-right: 50px;
 }
@@ -147,20 +166,27 @@ ul{
 .hero{
     background-color: var(--footer-background-color);
     text-align: center;
-
+    
 }
+.hero-bg{
+    background-image:linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/hero/herobg.jpg);
+    background-size: cover;
+}
+
 .hero-container{
-display: flex;
-flex-direction: column;
-align-items: center;
-min-height: 600px;
-justify-content: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 600px;
+    justify-content: center;
 }
 
 
 .hero .hero-title{
     margin-bottom: 30px;
-    width: 697px;
+    max-width: 697px;
     margin-left: auto;
     margin-right: auto;
     
@@ -189,15 +215,29 @@ justify-content: center;
     text-decoration: none;
     cursor: pointer;
 }
-.about-list{
-    display: flex;
-    gap: 30px;
-}
 
 .about-container{
     display: flex;
 }
 
+.about-list {
+    display: flex;
+    gap: 30px;
+}
+
+.about-list-frame{
+    background-color:var(--main-background-color);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.about-list-icons{
+    width: 70px; ;
+    height: 70px;
+
+}
 /*Стилизация заголовков h1/h2/h3*/
 .about .about-title{
     margin-bottom: 10px;
@@ -226,6 +266,7 @@ justify-content: center;
 }
 .team{
     margin-bottom: 94px;
+    background-color:var(--team-background-color);
 }
 .team-title{
     margin-top: 94px;
@@ -245,7 +286,43 @@ justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
 }
+
+.team-list-full{
+    background-color:var(--white-color);
+}
+/*-----START --ДОБАВЛЕНИЕ И ПОЗИЦИОНИРОВАНИЕ ИКОНОК со СПРАЙТА---------*/
+.social-list{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+.social-list-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color:var(--white-color);
+}
+.social-list-link:hover,
+.social-list-link:focus{
+    background-color: var(--navigation-color);
+
+}
+.social-list-icon{
+    width: 20px;
+    height: 20px;
+    fill: #AFB1B8;
+}
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon{
+    fill:#FFFFFF;
+}
+/*-----END --ДОБАВЛЕНИЕ И ПОЗИЦИОНИРОВАНИЕ ИКОНОК со СПРАЙТА---------*/
+
 .team .team-position{
+    margin-bottom: 16px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.2;
@@ -253,12 +330,126 @@ justify-content: center;
 }
 .team-description{
     padding: 30px 10px;
-    background: var(--main-background-color);
+    /*background: var(--main-background-color);*/
     border: 1px;
     border-top: 0px;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+.text-action{
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    
+    color:var(--white-color)
+}
+
+.clients{
+    background-color:var(--main-background-color); 
+}
+
+.clients-title{
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    
+    color:var(--main-text-color);
+}
+
+
+/*-----START --ДОБАВЛЕНИЕ И ПОЗИЦИОНИРОВАНИЕ ИКОНОК со СПРАЙТА---------*/
+.clients-list-icon{
+    width: 106px;
+    height: 60px;
+    fill: #AFB1B8;
+}
+
+.clients-list {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+.clients-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    background-color: var(--white-color);
+}
+
+.clients-list-link:hover,
+.clients-list-link:focus {
+    border-color: var(--navigation-color);
+
+}
+
+
+.clients-list-link:hover .clients-list-icon,
+.clients-list-link:focus .clients-list-icon {
+    fill:var(--navigation-color);
+}
+
+/*=======FOOTER=======*/
+/*-----END --ДОБАВЛЕНИЕ И ПОЗИЦИОНИРОВАНИЕ ИКОНОК со СПРАЙТА---------*/
+.action{
+    margin-left: 70px;
+}
+
+.action-list{
+    display: flex;
+    justify-content: center;
+}
+.action-social-list {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 10px;
+}
+
+.action-social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.action-social-list-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--white-color);
+}
+
+.action-social-list-link:hover,
+.action-social-list-link:focus{
+    background-color: var(--navigation-color);
+}
+
+.action-text-title{
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+}
+.action-title {
+    display: inline-block;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: var(--white-color);
+}
+
 .location-nav{
     background-color: var(--footer-background-color);
     text-decoration: none;
@@ -363,10 +554,13 @@ justify-content: center;
     text-decoration: none;
 }
 
-.location-nav-container{
+.footer-wrap{
+    display: flex;
+    justify-content: flex-start;
+    align-items:baseline;
     padding-top: 60px;
     padding-bottom: 60px ;
-    justify-content: flex-start;
+    
 }
 .location-list{
     margin-top: 20px;
