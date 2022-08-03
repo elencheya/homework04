@@ -1,5 +1,5 @@
 :root{
---main-background-color:#F5F5F5;
+--main-background-color:#FFFFFF;
 --footer-background-color:#2F303A;
 --main-text-color:#212121;
 --second-text-color:#757575;
@@ -8,6 +8,7 @@
 --footer-text-color:rgba(255, 255, 255, 0.6);
 --button-no-active-color:#F5F4FA;
 --team-background-color:#F5F4FA;
+--header-border-bottom:#ECECEC;
 }
 
 h1,
@@ -66,6 +67,9 @@ clip: rect(0 0 0 0);
 overflow: hidden;
 }
 
+.header-content{
+    border-bottom: 1px solid var(--header-border-bottom);
+}
 .header-container{
     display:flex;
     align-items: center;
@@ -117,13 +121,16 @@ overflow: hidden;
 .site-nav .link.current{
     color: var(--navigation-color)
 }
-.contacts-nav-list{
-    display: flex;
-}
+
 
 .contacts-nav{
     display: flex;
+    justify-content: center;
     margin-left: auto;
+} 
+.contact{
+    display: flex;
+    align-items: center;
 }
 
 .contacts-nav-icon-first{
@@ -133,11 +140,21 @@ overflow: hidden;
     fill: var(--second-text-color);
 }
 
+.contact:hover .contacts-nav-icon-first,
+.contact:focus .contacts-nav-icon-first{
+    fill: var(--navigation-color);
+}
+
 .contacts-nav-icon-second{
     margin-right: 10px;
     width: 10px;
     height: 16px;
     fill: var(--second-text-color);
+}
+
+.contact:hover .contacts-nav-icon-second,
+.contact:focus .contacts-nav-icon-second {
+    fill: var(--navigation-color);
 }
 
 .contacts-nav li:not(:last-child){
@@ -164,13 +181,16 @@ ul{
 /*Стилизация кнопки и подложки*/
 /*HERO*/
 .hero{
-    background-color: var(--footer-background-color);
+
     text-align: center;
     
 }
 .hero-bg{
+    background-color: var(--footer-background-color);
     background-image:linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/hero/herobg.jpg);
     background-size: cover;
+    max-width: 1600px;
+    margin: auto;
 }
 
 .hero-container{
@@ -264,10 +284,11 @@ ul{
 .about .about-description{
     line-height: 1.71;
 }
+
 .team{
-    margin-bottom: 94px;
     background-color:var(--team-background-color);
 }
+
 .team-title{
     margin-top: 94px;
     margin-bottom: 50px;
@@ -387,7 +408,6 @@ ul{
 .clients-list-link:hover,
 .clients-list-link:focus {
     border-color: var(--navigation-color);
-
 }
 
 

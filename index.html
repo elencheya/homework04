@@ -15,7 +15,7 @@
 </head>
 <body>
     <!--Шапка страницы с логотипом,навигацией и контактными данными-->
-    <header>
+    <header class="header-content">
         <div class=" container header-container">
             <nav class="header-navigation">
                 <a href="./index.html" class="logo-head"><span class="firstpart">Web</span>Studio</a>
@@ -28,18 +28,22 @@
             
             <ul class="contacts-nav">
                 <li class="contacts-nav-list">
-                    <svg class="contacts-nav-icon-first">
-                        <use href="./images/sprite/sprite.svg.svg#icon-envelope">
-                        </use>
-                    </svg>
-                    <a href="mailto:info@devstudio.com" class="contact">info@devstudio.com</a>
+                    <a class="contact" href="mailto:info@devstudio.com">
+                        <svg class="contacts-nav-icon-first">
+                            <use href="./images/sprite/sprite.svg.svg#icon-envelope">
+                            </use>
+                        </svg>
+                        info@devstudio.com
+                    </a>
                 </li>
                 <li class="contacts-nav-list">
-                    <svg class="contacts-nav-icon-second">
-                        <use href="./images/sprite/sprite.svg.svg#icon-vector3">
-                        </use>
-                    </svg>
-                    <a href="tel:+380961111111" class="contact">+38 096 111 11 11</a>
+                    <a class="contact" href="tel:+380961111111">
+                        <svg class="contacts-nav-icon-second">
+                            <use href="./images/sprite/sprite.svg.svg#icon-vector3">
+                            </use>
+                        </svg>
+                        +38 096 111 11 11
+                    </a>
                 </li>
             </ul>
         </div>
